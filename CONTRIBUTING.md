@@ -3,7 +3,7 @@
 
 1. FORK the project from [main repository](https://github.com/sfusurge/DegreeNavigator)
 2. CLONE the project to your local machine
-3. create a new BRANCH call it dev-<YOUR-FULL-NAME> for example dev-amir
+3. create a new BRANCH call it dev-YOUR-FULL-NAME for example dev-amirnaghibi
 4. ADD your name to the end of this file
 5. PUSH your changes to your github account
 6. create a PULL REQUEST
