@@ -18,3 +18,4 @@
 
 # CONTRIBUTORS
 - Amir Naghibi
+- Jason Lee
