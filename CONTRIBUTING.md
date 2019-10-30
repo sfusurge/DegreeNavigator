@@ -19,3 +19,4 @@
 # CONTRIBUTORS
 - Amir Naghibi
 - Jason Lee
+- Shea Janke
