@@ -20,3 +20,4 @@
 - Amir Naghibi
 - Jason Lee
 - Shea Janke
+- Duy Nguyen
