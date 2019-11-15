@@ -21,3 +21,5 @@
 - Jason Lee
 - Shea Janke
 - Sunayani Sarkar (Sun)
+- Kassymkhan Bekbolatov
+- Denzel Tjokroardi
