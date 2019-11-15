@@ -44,9 +44,9 @@ def getPageInfo(url):
             WQB.append(wqb)
 
 
-
 import requests
 from bs4 import BeautifulSoup
+
 r = requests.get('https://www.sfu.ca/students/calendar/2020/spring/courses.html')
 soup = BeautifulSoup(r.text,'html.parser')
 names = []
@@ -57,17 +57,15 @@ count = 0
 for result in results:
     try:
         result = result.find('a')['href']
-        if '/students/calendar/2020/spring/courses/' in result and count < 73:
+        if '/students/calendar/2020/spring/courses/' in result and count < 20:
             getPageInfo('https://www.sfu.ca' + result)
             count +=1
     except:
         continue
-
-
-getPageInfo('https://www.sfu.ca/students/calendar/2020/spring/courses/psyc.html')
-print(len(names),len(credits),len(WQB))
-
-'''
 for a in range(len(names)):
+    wqb = ""
+    for b in WQB[a]:
+        wqb += b + ","
+
+for a in range (100):
     print(names[a],credits[a],WQB[a])
-'''
