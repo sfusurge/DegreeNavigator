@@ -21,3 +21,6 @@
 - Jason Lee
 - Shea Janke
 - Duy Nguyen
+- Sunayani Sarkar (Sun)
+- Kassymkhan Bekbolatov
+- Denzel Tjokroardi
