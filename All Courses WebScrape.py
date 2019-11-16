@@ -5,10 +5,12 @@ Shea Janke
 def getPageInfo(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
-    #NAMES & CREDITS
+    #NAME & TITLE & CREDITS
     results = soup.find_all('h3')
     courseType = ""
     for result in results:
+        if len(result.text.split('-')) > 1:
+            titles.append(result.text.split('-')[1][1:result.text.split('-')[1].find('\n')])
         words = result.text.split()
         for word in words:
             word = word.strip('\n\t,;')
@@ -27,6 +29,7 @@ def getPageInfo(url):
     for result in results:
         text = result.text
         if text[0] == '\n':
+            descriptions.append(result.text.strip('\n\t '))
             text = text.split('.')
             wqb = []
             if len(text) >= 2:
@@ -50,14 +53,16 @@ from bs4 import BeautifulSoup
 r = requests.get('https://www.sfu.ca/students/calendar/2020/spring/courses.html')
 soup = BeautifulSoup(r.text,'html.parser')
 names = []
+titles = []
 credits = []
+descriptions = []
 WQB = []
 results = soup.find_all('li')
 count = 0
 for result in results:
     try:
         result = result.find('a')['href']
-        if '/students/calendar/2020/spring/courses/' in result and count < 20:
+        if '/students/calendar/2020/spring/courses/' in result:
             getPageInfo('https://www.sfu.ca' + result)
             count +=1
     except:
@@ -67,5 +72,13 @@ for a in range(len(names)):
     for b in WQB[a]:
         wqb += b + ","
 
-for a in range (100):
-    print(names[a],credits[a],WQB[a])
+print(len(names),len(titles),len(descriptions),len(credits),len(WQB))
+#Prints the first 100 courses from the website
+
+File = open(r"Courses_File.txt","w")
+for a in range(len(names)):
+    File.write(str([names[a].split()[0], names[a].split()[1], titles[a], descriptions[a], credits[a], WQB[a]]))
+    File.write('\n')
+
+
+File.close()
