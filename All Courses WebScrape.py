@@ -72,7 +72,7 @@ for a in range(len(names)):
     for b in WQB[a]:
         wqb += b + ","
 
-print(len(names),len(titles),len(descriptions),len(credits),len(WQB))
+#print(len(names),len(titles),len(descriptions),len(credits),len(WQB))
 #Prints the first 100 courses from the website
 
 File = open(r"Courses_File.txt","w")
