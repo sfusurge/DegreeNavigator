@@ -26,6 +26,8 @@ allCourses["name"] = "Courses"
 allCourses["children"] = courseTypes
 
 #This code puts the dictionary in the json file
+'''
 import json
-with open('Courses_File_New.json', 'w') as fp:
+with open('Courses_File.json', 'w') as fp:
     json.dump(allCourses, fp)
+'''
