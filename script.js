@@ -1,7 +1,7 @@
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 2000 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 // appends a 'group' element to 'svg'
@@ -12,7 +12,7 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate("
         + margin.left + "," + margin.top + ")");
-
+              
 var i = 0, duration = 750, root;
 
 // declares a tree layout and assigns the size

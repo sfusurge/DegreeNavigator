@@ -13,7 +13,7 @@ h2{
   }
   
   .node text {
-    font: 12px sans-serif;
+    font: 12px sans-serif bold;
   }
   
   .link {
