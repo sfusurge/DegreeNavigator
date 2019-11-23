@@ -13,6 +13,10 @@ while a < len(lines):
         while a < len(lines) and eval(lines[a])[1][0] == currentLevel:
             course = {}
             course["name"] = currentType + ' ' + eval(lines[a])[1]
+            course["title"] = eval(lines[a])[2]
+            course["description"] = eval(lines[a])[3]
+            course["credits"] = eval(lines[a])[4]
+            course["WQB"] = eval(lines[a])[5]
             courses.append(course)
             a += 1
         courseLevel["name"] = currentLevel + "XX"
@@ -26,8 +30,7 @@ allCourses["name"] = "Courses"
 allCourses["children"] = courseTypes
 
 #This code puts the dictionary in the json file
-'''
+
 import json
-with open('Courses_File.json', 'w') as fp:
+with open('Courses_File2.json', 'w') as fp:
     json.dump(allCourses, fp)
-'''
