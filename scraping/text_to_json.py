@@ -1,4 +1,4 @@
-file_reader = open('Courses_File.txt', 'r')
+file_reader = open('all_courses_output.txt', 'r')
 lines = file_reader.readlines()
 a = 0
 courseTypes = []
