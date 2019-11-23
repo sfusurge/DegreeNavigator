@@ -1,3 +1,11 @@
+body{
+    background-color: rgb(253, 159, 175);
+}
+
+h2{
+    text-align: center;
+}
+
 .node circle {
     fill: #fff;
     stroke: steelblue;
