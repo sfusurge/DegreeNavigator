@@ -1,7 +1,7 @@
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
     width = 960 - margin.left - margin.right,
-    height = 2000 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 // appends a 'group' element to 'svg'
@@ -12,7 +12,7 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate("
         + margin.left + "," + margin.top + ")");
-              
+        
 var i = 0, duration = 750, root;
 
 // declares a tree layout and assigns the size
@@ -28,6 +28,7 @@ root.children.forEach(collapse);
 
 update(root);
 
+
 // Collapse the node and all it's children
 function collapse(d) {
     if (d.children) {
@@ -38,6 +39,31 @@ function collapse(d) {
 }
 
 function update(source) {
+
+    //compute the new height
+    var levelWidth = [1];
+    var childCount = function(level, n) {
+        
+        if(n.children && n.children.length > 0) {
+        if(levelWidth.length <= level + 1) levelWidth.push(0);
+        
+        levelWidth[level+1] += n.children.length;
+        n.children.forEach(function(d) {
+            childCount(level + 1, d);
+        });
+        }
+    };
+    childCount(0, root);  
+    var newHeight = d3.max(levelWidth) * 25 + height; // 30 pixels per line  
+    treemap = treemap.size([newHeight, width]);    
+
+    d3.select("svg").remove();
+    svg = d3.select("body").append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", newHeight + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate("
+            + margin.left + "," + margin.top + ")");
 
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
