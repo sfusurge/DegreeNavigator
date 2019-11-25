@@ -75,7 +75,7 @@ for a in range(len(names)):
 #print(len(names),len(titles),len(descriptions),len(credits),len(WQB))
 #Prints the first 100 courses from the website
 
-File = open(r"Courses_File.txt","w")
+File = open(r"all_courses_output.txt","w")
 for a in range(len(names)):
     File.write(str([names[a].split()[0], names[a].split()[1], titles[a], descriptions[a], credits[a], WQB[a]]))
     File.write('\n')
