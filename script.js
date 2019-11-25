@@ -1,3 +1,6 @@
+//put the courses taken in this array
+var coursesTaken = ["CMPT 120", "CMPT 125"];
+
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
     width = 960 - margin.left - margin.right,
@@ -40,7 +43,7 @@ function collapse(d) {
 
 function update(source) {
 
-    //compute the new height
+    //compute the new height of the tree and svg
     var levelWidth = [1];
     var childCount = function(level, n) {
         
@@ -54,9 +57,11 @@ function update(source) {
         }
     };
     childCount(0, root);  
-    var newHeight = d3.max(levelWidth) * 25 + height; // 30 pixels per line  
+    var newHeight = d3.max(levelWidth) * 25 + height; // 25 pixels per line  
     treemap = treemap.size([newHeight, width]);    
 
+    //removes the old svg and makes a new one with updated dimensions
+    //copied from the initialization of the svg, but with height attr changed
     d3.select("svg").remove();
     svg = d3.select("body").append("svg")
         .attr("width", width + margin.right + margin.left)
@@ -121,7 +126,13 @@ function update(source) {
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
         .attr('r', 10)
+        //turns the node green if the name is in coursesTaken
         .style("fill", function(d) {
+            for(a = 0; a < coursesTaken.length; a++){
+                if(d.data.name == coursesTaken[a]){
+                    return "green";
+                }
+            }
             return d._children ? "lightsteelblue" : "#fff";
         })
         .attr('cursor', 'pointer');
