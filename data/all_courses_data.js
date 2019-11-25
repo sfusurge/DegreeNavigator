@@ -1,4 +1,4 @@
-{
+var treeData = {
     "name": "Courses",
     "children": [
         {
