@@ -467,9 +467,19 @@ var treeData = {
                             "description": "ARAB 101 is the continuation of ARAB 100. Continues to develop basic oral and written skills. Includes the study of Modern Standard Arabic language, including grammar, syntax and vocabulary. Also exposes students to the modern Arabic language and some major aspects of Middle Eastern/Arab culture. Prerequisite: ARAB 100 (or ARAB 134) or equivalent.   Students with credit for ARAB 148 or LANG 148 under the title \"Introductory Arabic II\" may not take this course for further credit.",
                             "credits": "3",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ARCH",
+            "children": [
+                {
+                    "name": "1XX",
+                    "children": [
                         {
-                            "name": "ARAB 100",
+                            "name": "ARCH 100",
                             "title": "Ancient Peoples and Places",
                             "description": "A broad survey of human cultural development from the late Palaeolithic/PalaeoIndian periods (ca 40,000 BP) to the rise of civilization and empires, in both the Old and New Worlds.  Breadth-Social Sciences.",
                             "credits": "3",
@@ -479,7 +489,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "ARAB 131",
+                            "name": "ARCH 131",
                             "title": "Human Origins",
                             "description": "A non-technical survey of the primate background of humans, fossil primates, and fossil humans, and the associated evidence of cultural development. An introduction to physical anthropology.  Breadth-Social Sci/Science.",
                             "credits": "3",
@@ -489,12 +499,7 @@ var treeData = {
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "ARCH",
-            "children": [
+                },
                 {
                     "name": "2XX",
                     "children": [
@@ -16641,36 +16646,6 @@ var treeData = {
                             "description": "Instruction in and practice of skills required in coursework in the Faculty of Arts and Social Sciences (FASS). Texts\nfrom disciplines such as psychology, economics, philosophy, etc. will be used to examine key concepts from the\nSocial Sciences. Students will improve their comprehension of written and oral texts and will learn to use the\nvocabulary, grammar and content of these texts in speaking and writing. Prerequisite: FAL X99 with a grade of C, or other equivalent with departmental permission.",
                             "credits": "4",
                             "WQB": []
-                        },
-                        {
-                            "name": "EAS 100",
-                            "title": "Great Ideas in Environment",
-                            "description": "Examines great books and articles that have transformed human understanding of the environment. Students read classic works in their historical and scientific contexts and learn how the concepts they introduced changed human-nature relationships. Breadth-Humanities.",
-                            "credits": "3",
-                            "WQB": [
-                                "B-Hum"
-                            ]
-                        },
-                        {
-                            "name": "EAS 197",
-                            "title": "Environment Seminar I",
-                            "description": "Intended primarily for students in the first two years of their study. Focuses on and integrates topics concerning environmental disciplines. Specific topics may vary. Pass/fail.",
-                            "credits": "1",
-                            "WQB": []
-                        },
-                        {
-                            "name": "EAS 198",
-                            "title": "Environment Seminar II",
-                            "description": "Intended primarily for students in the first two years of their study. Focuses on and integrates topics concerning environmental disciplines. Specific topics may vary. Pass/Fail.",
-                            "credits": "1",
-                            "WQB": []
-                        },
-                        {
-                            "name": "EAS 199",
-                            "title": "Special Topics in Environment ",
-                            "description": "A specific topic within the field of Environment not examined in depth in regular courses. This course will provide students with understanding, perspective and experience in emerginig and important areas of environment.",
-                            "credits": "3",
-                            "WQB": []
                         }
                     ]
                 }
@@ -16679,6 +16654,41 @@ var treeData = {
         {
             "name": "ENV",
             "children": [
+                {
+                    "name": "1XX",
+                    "children": [
+                        {
+                            "name": "ENV 100",
+                            "title": "Great Ideas in Environment",
+                            "description": "Examines great books and articles that have transformed human understanding of the environment. Students read classic works in their historical and scientific contexts and learn how the concepts they introduced changed human-nature relationships. Breadth-Humanities.",
+                            "credits": "3",
+                            "WQB": [
+                                "B-Hum"
+                            ]
+                        },
+                        {
+                            "name": "ENV 197",
+                            "title": "Environment Seminar I",
+                            "description": "Intended primarily for students in the first two years of their study. Focuses on and integrates topics concerning environmental disciplines. Specific topics may vary. Pass/fail.",
+                            "credits": "1",
+                            "WQB": []
+                        },
+                        {
+                            "name": "ENV 198",
+                            "title": "Environment Seminar II",
+                            "description": "Intended primarily for students in the first two years of their study. Focuses on and integrates topics concerning environmental disciplines. Specific topics may vary. Pass/Fail.",
+                            "credits": "1",
+                            "WQB": []
+                        },
+                        {
+                            "name": "ENV 199",
+                            "title": "Special Topics in Environment ",
+                            "description": "A specific topic within the field of Environment not examined in depth in regular courses. This course will provide students with understanding, perspective and experience in emerginig and important areas of environment.",
+                            "credits": "3",
+                            "WQB": []
+                        }
+                    ]
+                },
                 {
                     "name": "2XX",
                     "children": [
@@ -17483,16 +17493,26 @@ var treeData = {
                             "description": "An introduction to the kinds of reading and writing students will encounter in lower-division courses across the university disciplines. Important aspects of the writing process are discussed and illustrated in class, and students receive individual feedback on their academic writing. Students who wish to use the course to meet the language proficiency prereq of a writing-intensive course must obtain a C or better. Enrolment priority is given to undergraduate students who have not yet met the language proficiency prere of a writing-intensive course. Students who receive less than a C grade on their first attempt at the course may re-enroll. No student may attempt the course more than twice. Units from this course do not count toward the units required for an SFU degree; however, the course grade is included in calculation of the student's cumulative GPA.",
                             "credits": "4",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FAN",
+            "children": [
+                {
+                    "name": "XXX",
+                    "children": [
                         {
-                            "name": "FAL X92",
+                            "name": "FAN X92",
                             "title": "ST",
                             "description": "An in-depth look at what mathematics is; mathematical reasoning, problem solving and math study skills. Review of fundamental topics and concepts of mathematics and their real-world applications. This course aims to develop students' math study skills, confidence in their quantitative abilities, and to learn how understanding mathematics is both one of the keys to mastering other disciplines, and useful in everyday situations. Prerequisite: FAN X91.   Students who have taken MATH 150, 151, 154, 157, or FAN X99 first may not then take this course for further credit.",
                             "credits": "2",
                             "WQB": []
                         },
                         {
-                            "name": "FAL X99",
+                            "name": "FAN X99",
                             "title": "Foundations of Analytical and Quantitative Reasoning",
                             "description": "Designed for students who need to upgrade their mathematical background in preparation for SFU Q courses. Also recommended for students who wish to refresh skills after several years away from mathematics. An in-depth look at what mathematics is; mathematical reasoning, problem solving and math study skills. Review of fundamental topics and concepts of mathematics and their real-world applications. This course aims to develop students' math study skills, confidence in their quantitative abilities, and to learn how understanding mathematics is both one of the keys to mastering other disciplines, and useful in everyday situations. Units from this course do not count towards the 120 units required for an SFU degree; however, the course grade is included in the calculation of the student's cumulative GPA. Students who have taken, have received transfer credit for, or are currently taking MATH 150, 151, 154 or 157 may not take FAN X99 for credit without the permission from the Department of Mathematics.",
                             "credits": "4",
@@ -23027,72 +23047,82 @@ var treeData = {
                             "description": "An in-depth study of a theme or aspect in the Humanities; topics will vary from offering to offering in order to meet the needs of the graduate cohort.",
                             "credits": "5",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "INS",
+            "children": [
+                {
+                    "name": "8XX",
+                    "children": [
                         {
-                            "name": "HUM 890",
+                            "name": "INS 890",
                             "title": "Comprehensive Exam",
                             "description": "Students must pass a comprehensive examination. The structure of the examination will be determined by the supervisory committee. Graded on a satisfactory/unsatisfactory basis. Prerequisite: Permission of the department.",
                             "credits": 0,
                             "WQB": []
                         },
                         {
-                            "name": "HUM 891",
+                            "name": "INS 891",
                             "title": "Directed Readings",
                             "description": "To be selected by the student and supervisory committee.",
                             "credits": "1",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 892",
+                            "name": "INS 892",
                             "title": "Directed Readings",
                             "description": "To be selected by the student and supervisory committee.",
                             "credits": "2",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 893",
+                            "name": "INS 893",
                             "title": "Directed Readings",
                             "description": "To be selected by the student and supervisory committee.",
                             "credits": "3",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 894",
+                            "name": "INS 894",
                             "title": "Directed Readings",
                             "description": "To be selected by the student and supervisory committee.",
                             "credits": "4",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 895",
+                            "name": "INS 895",
                             "title": "Directed Readings",
                             "description": "To be selected by the student and the supervisory committee.",
                             "credits": "5",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 896",
+                            "name": "INS 896",
                             "title": "Special Topics",
                             "description": "To be selected by the student and the supervisory committee.",
                             "credits": "5",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 897",
+                            "name": "INS 897",
                             "title": "President's Dream Colloquium",
                             "description": "This special topics course is for students participating in the President\u2019s Dream Colloquium. The colloquium is an initiative to bring leading thinkers to SFU and provide an annual forum for intensive interdisciplinary exchange amongst faculty and students in the form of a graduate course. Course registration is through application only. Graded on a satisfactory/unsatisfactory basis.",
                             "credits": "5",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 898",
+                            "name": "INS 898",
                             "title": "Master's Thesis",
                             "description": "",
                             "credits": "18",
                             "WQB": []
                         },
                         {
-                            "name": "HUM 899",
+                            "name": "INS 899",
                             "title": "PhD Thesis",
                             "description": "Graded on a satisfactory/unsatisfactory basis.",
                             "credits": "18",
@@ -28592,23 +28622,33 @@ var treeData = {
                             "description": "Graded on a satisfactory/unsatisfactory basis.",
                             "credits": "6",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "NEUR",
+            "children": [
+                {
+                    "name": "8XX",
+                    "children": [
                         {
-                            "name": "MBB 800",
+                            "name": "NEUR 800",
                             "title": "Foundations of Cellular and Molecular Neuroscience",
                             "description": "Covers fundamental concepts related to the basic cellular neurobiology of neurons and other nervous system cells, neuronal pathfinding, electrophysiology, dendritic organization, axonal transport, plasticity, and signal transduction, as well as the integration of neurons into neural circuits and diseases of the nervous system. This course can only be taken once, either during a Masters or Doctoral program.",
                             "credits": "3",
                             "WQB": []
                         },
                         {
-                            "name": "MBB 801",
+                            "name": "NEUR 801",
                             "title": "Foundations of Systems Neuroscience",
                             "description": "Fundamental concepts related to information processing (sensing, encoding, planning, decision-making, execution) by neural circuits are discussed. Topics include: neural communication, sensorimotor control of movement, neuroplasticity, and diseases of the brain. Issues of experimental design and application of modern neuroscience methods will be integrated across these topics. Additional topics will vary depending on the year. This course can only be taken once, either during a Masters or Doctoral program.",
                             "credits": "3",
                             "WQB": []
                         },
                         {
-                            "name": "MBB 802",
+                            "name": "NEUR 802",
                             "title": "Translational and Integrative Neuroscience Workshop",
                             "description": "Workshops focus on providing students with skills to facilitate the translation of neuroscience, broadly defined, for the benefit of society. Faculty members at SFU as well as relevant clinicians and company representatives will run these workshops. Topics may include: how to translate fundamental questions into clinical-oriented questions; how to perform clinical research; how to start a spin-off company; how to pitch ideas for commercialization; how to work with industry; how drug-discovery works; and how to communicate to different audiences. All topics will relate specifically to neuroscience. Prerequisite: Enrollment in translational and integrative neuroscience graduate specialization or permission from lead workshop organizer.",
                             "credits": 0,
@@ -28740,9 +28780,19 @@ var treeData = {
                             "description": "This is an introductory course for heritage Persian/Farsi or Dari language speakers who have oral skills (speaking and comprehension), but lack writing and reading skills. This course is designed for heritage speakers who have had no formal training in Persian/Farsi or Dari and have had no training in grammar and syntax.",
                             "credits": "3",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PHIL",
+            "children": [
+                {
+                    "name": "1XX",
+                    "children": [
                         {
-                            "name": "PERS 100W",
+                            "name": "PHIL 100W",
                             "title": "Knowledge and Reality",
                             "description": "An introduction to some of the central problems of philosophy. Topics to be discussed include the different theories of reality; the nature and sources of knowledge, truth, evidence, and reason; the justification of belief and knowledge about the universe. These topics and problems will be considered as they arise in the context of issues such as: relativism versus absolutism; the existence of God; personal identity; the nature of the mind and its relation to the body; free will and determinism; the possibility of moral knowledge. Open to all students. Students with credit for PHIL 100 may not take this course for further credit. Writing/Breadth-Humanities.",
                             "credits": "3",
@@ -28752,7 +28802,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 105",
+                            "name": "PHIL 105",
                             "title": "Critical Thinking",
                             "description": "An introduction to the evaluation of arguments as they are encountered in everyday life. The central aim will be to sharpen skills of reasoning and argumentation by understanding how arguments work and learning to distinguish those which actually prove what they set out to show from those which do not. Open to all students. Student with credit for PHIL XX1 may not take this course for further credit. Q/Breadth-Social Sci/Sciences.",
                             "credits": "3",
@@ -28762,7 +28812,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 110",
+                            "name": "PHIL 110",
                             "title": "Introduction to Logic and Reasoning",
                             "description": "The aim of this course is to familiarize students with fundamental techniques of correct reasoning. Special attention is given to the methods of logic in particular, and to their role in the discovery of truth not only within science and philosophy but within all forms of rational enquiry. Open to all students. Quantitative.",
                             "credits": "3",
@@ -28771,7 +28821,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 120W",
+                            "name": "PHIL 120W",
                             "title": "Moral and Legal Problems",
                             "description": "A critical examination of a range of moral and legal issues we confront in our dealings with the state and our fellow human beings, such as: Is it wrong to break the law? Should pornography and recreational drugs be illegal? Do animals have rights? Is there a duty to admit immigrants? Are there duties to the world's poor? Are indigenous peoples owed reparations? Students with credit for PHIL 120 may not take this course for further credit. Writing/Breadth-Humanities.",
                             "credits": "3",
@@ -28781,7 +28831,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 121",
+                            "name": "PHIL 121",
                             "title": "Global Justice",
                             "description": "An introduction to the ethical issues arising from interactions of states, NGOs and other international agents. Topics may include international human rights, terrorism, war, gender justice, climate justice, fairness in international trade, cultural diversity and conflict, the rights of indigenous peoples, collective responsibility and restitution for historical wrongdoing, among others.  Students who have received credit for PHIL 220 cannot receive credit for this course.  Breadth-Humanities/Social Sciences.",
                             "credits": "3",
@@ -28792,7 +28842,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 131",
+                            "name": "PHIL 131",
                             "title": "Selected Topics",
                             "description": "A specific topic, philosopher or philosophical work to be dealt with as occasion and demand warrant. Students may repeat this course for further credit under a different topic. Breadth-Humanities.",
                             "credits": "3",
@@ -28801,7 +28851,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 144",
+                            "name": "PHIL 144",
                             "title": "Introduction to Philosophy of Science",
                             "description": "An introduction to philosophical issues concerning the nature of science. Topics to be discussed include the distinction between science and pseudo-science, the nature of scientific method, the nature of explanation in the natural and social sciences, the phenomenon of scientific change, the relationship between scientific theory and observation, and the objectivity of social science. Students with credit for PHIL 244 may not take this course for further credit. Breadth-Humanities/Sciences.",
                             "credits": "3",
@@ -28811,7 +28861,7 @@ var treeData = {
                             ]
                         },
                         {
-                            "name": "PERS 150",
+                            "name": "PHIL 150",
                             "title": "Great Works in the History of Philosophy",
                             "description": "A thematic survey of some classical texts in the history of Western philosophy, from late Antiquity to the 19th century, including by figures such as Plato, Aristotle, Augustine, Aquinas, Descartes, de Gournay, Elisabeth of Bohemia, Spinoza, Leibniz, du Ch\u00e2telet, Hume, Astell, Wollstonecraft, Kant, Mill, Hegel, Schopenhauer, Nietzsche, and others. Themes may include the nature of the human being, the role of God in philosophical thought, conceptions of the good life, and others. Open to all students. Students with credit for PHIL 151 may not take this course for further credit. Breadth-Humanities.",
                             "credits": "3",
@@ -28820,12 +28870,7 @@ var treeData = {
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "PHIL",
-            "children": [
+                },
                 {
                     "name": "2XX",
                     "children": [
@@ -32636,9 +32681,19 @@ var treeData = {
                             "description": "Students who have a basic knowledge of Punjabi (Gurmukhi) script will learn to further develop their ability to speak, comprehend, read and write Punjabi while exploring the Punjabi culture. Prerequisite: PUNJ 100 or equivalent.   Students with credit for LANG 148 Special Topics - Intro to Punjabi II may not take this course for further credit.",
                             "credits": "3",
                             "WQB": []
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "REM",
+            "children": [
+                {
+                    "name": "1XX",
+                    "children": [
                         {
-                            "name": "PUNJ 100",
+                            "name": "REM 100",
                             "title": "Global Change",
                             "description": "This course provides students with an overview of global environmental change and its causes from a social science perspective, historically and at the present time. Population growth, an increasing ecological footprint and changes in ideology, social organization, economy and technology will be critically reviewed. New ways of thinking in natural and social science will be considered in relation to specific issues such as land, soil and food; energy, raw materials and solid waste; air pollution and transportation; water, oceans and fisheries; climate change; forestry and biodiversity; urbanization, and alternative futures.  Breadth-Social Sciences.",
                             "credits": "3",
@@ -32648,12 +32703,7 @@ var treeData = {
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "REM",
-            "children": [
+                },
                 {
                     "name": "2XX",
                     "children": [

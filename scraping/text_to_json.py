@@ -10,7 +10,7 @@ while a < len(lines):
         courseLevel = {}
         currentLevel = eval(lines[a])[1][0]
         courses = []
-        while a < len(lines) and eval(lines[a])[1][0] == currentLevel:
+        while a < len(lines) and eval(lines[a])[1][0] == currentLevel and eval(lines[a])[0] == currentType:
             course = {}
             course["name"] = currentType + ' ' + eval(lines[a])[1]
             course["title"] = eval(lines[a])[2]

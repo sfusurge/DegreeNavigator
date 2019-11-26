@@ -149,6 +149,12 @@ function update(source) {
                     return "green";
                 }
             }
+            //Turns all W courses orange
+            if(d.data.WQB != undefined){
+                if (d.data.WQB.includes("W")){
+                    return "orange";
+                }
+            }
             return d._children ? "lightsteelblue" : "#fff";
         })
         .attr('cursor', 'pointer');
@@ -228,7 +234,7 @@ function update(source) {
             if (d.data.description) {
                 // Open modal
                 modal.style.display = "block";
-                document.getElementById("modalTitle").innerHTML = d.data.name;
+                document.getElementById("modalTitle").innerHTML = d.data.name + ": " + d.data.title + " (" + d.data.credits + ")";
                 document.getElementById("modalBody").innerHTML = d.data.description;
             } else {
                 d.children = d._children;
