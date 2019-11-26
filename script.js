@@ -152,7 +152,7 @@ function update(source) {
             //Turns all W courses orange
             if(d.data.WQB != undefined){
                 if (d.data.WQB.includes("W")){
-                    return "orange";
+                    return "red";
                 }
             }
             return d._children ? "lightsteelblue" : "#fff";
