@@ -4,7 +4,19 @@ var coursesTaken = ["CMPT 120", "CMPT 125"];
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom,
+    linkLength = 180;
+
+// Responsive width
+d3.select("body")
+    .attr("onresize","updateWidth()")
+    .attr("onload", "updateWidth()");
+
+function updateWidth () {
+    width = window.innerWidth-margin.left-margin.right;
+    linkLength=(width-50)/4; 
+    update(root);
+}
 
 // append the svg object to the body of the page
 // appends a 'group' element to 'svg'
@@ -56,7 +68,6 @@ window.onclick = function(event) {
   }
 }
 
-
 function update(source) {
 
     //compute the new height of the tree and svg
@@ -73,13 +84,15 @@ function update(source) {
         }
     };
     childCount(0, root);  
-    var newHeight = d3.max(levelWidth) * 25 + height; // 25 pixels per line  
-    treemap = treemap.size([newHeight, width]);    
-
-    //Update svg dimension
+    
+    height = d3.max(levelWidth) * 25 + 500 - margin.top - margin.bottom; // 25 pixels per line  
+    
+    // Update tree and svg dimensions
+    treemap = treemap.size([height, width]);    
     d3.select("svg")
-        .attr("height",newHeight + margin.top + margin.bottom);
-
+        .attr("height",height + margin.top + margin.bottom)
+        .attr("width",width + margin.left + margin.right);
+    
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
 
@@ -88,7 +101,7 @@ function update(source) {
         links = treeData.descendants().slice(1);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d) { d.y = d.depth * 180 });
+    nodes.forEach(function(d) { d.y = d.depth * linkLength });
 
     // ****************** Nodes section ***************************
 
