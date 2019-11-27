@@ -218,23 +218,39 @@ function update(source) {
         return path
     }
 
+    // Expand node children
+    function nodeExpand(d) {
+        if(d._children){
+            d.children = d._children;
+            d._children = null;
+            console.log("expanding");
+        }
+    }
+
+    // Recursively collapse all node descendants
+    function nodeCollapseDescendants(d) {
+        if (d.children) {
+            d.children.forEach(nodeCollapseDescendants);
+            d._children = d.children;
+            d.children = null;
+            console.log("collapsing");
+        }
+    }
+    
     // Toggle children on click.
     function click(d) {
         console.log(d);
-        if (d.children) {
-            d._children = d.children;
-            d.children = null;
-        } else {
-            if (d.data.description) {
-                // Open modal
-                modal.style.display = "block";
-                document.getElementById("modalTitle").innerHTML = d.data.name + ": " + d.data.title + " (" + d.data.credits + ")";
-                document.getElementById("modalBody").innerHTML = d.data.description;
-            } else {
-                d.children = d._children;
-                d._children = null;
-            }
-        }
+        if(d._children)
+            nodeExpand(d);
+        else if(d.children)
+            nodeCollapseDescendants(d);
+        else if (d.data.description) {
+            // Open modal
+            modal.style.display = "block";
+            document.getElementById("modalTitle").innerHTML = d.data.name + ": " + d.data.title + " (" + d.data.credits + ")";
+            document.getElementById("modalBody").innerHTML = d.data.description;
+        } 
+        
         update(d);
     }
 }
