@@ -76,15 +76,9 @@ function update(source) {
     var newHeight = d3.max(levelWidth) * 25 + height; // 25 pixels per line  
     treemap = treemap.size([newHeight, width]);    
 
-    //removes the old svg and makes a new one with updated dimensions
-    //copied from the initialization of the svg, but with height attr changed
-    d3.select("svg").remove();
-    svg = d3.select("body").append("svg")
-        .attr("width", width + margin.right + margin.left)
-        .attr("height", newHeight + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate("
-            + margin.left + "," + margin.top + ")");
+    //Update svg dimension
+    d3.select("svg")
+        .attr("height",newHeight + margin.top + margin.bottom);
 
     // Assigns the x and y position for the nodes
     var treeData = treemap(root);
