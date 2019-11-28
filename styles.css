@@ -1,27 +1,28 @@
 body{
-    background-color: rgb(253, 159, 175);
-}
-
-h2{
-    text-align: center;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;   
 }
 
 .node circle {
-    fill: #fff;
+    fill: #FEC962;
     stroke: steelblue;
     stroke-width: 3px;
   }
   
-  .node text {
-    font: 12px sans-serif;
-    font-weight: 700;
-  }
+.node text {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   
-  .link {
-    fill: none;
-    stroke: #ccc;
-    stroke-width: 2px;
-  }
+}
+  
+.link {
+  fill: none;
+  stroke: rgba(189, 189, 189, 0.712);
+  stroke-width: 2px;
+}
 
   /* The Modal (background) */
 .modal {
@@ -35,6 +36,7 @@ h2{
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Modal Content/Box */
@@ -59,4 +61,102 @@ h2{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #ddd;
+  position: relative;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 20px 22px;
+  text-decoration: none;
+  font-size: 36px;
+  display: block;
+}
+#logo {
+  color: #212121;
+  text-align: center; 
+}
+/* Style the hamburger menu */
+.topnav a.icon {
+  background-color: #ddd;
+  color: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+#button:hover {
+  background: black;
+  color: #ddd;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #212121;
+  color: #DADADA;
 }

@@ -2,7 +2,7 @@
 var coursesTaken = ["CMPT 120", "CMPT 125"];
 
 // Set the dimensions and margins of the diagram
-var margin = { top: 20, right: 90, bottom: 30, left: 90 },
+var margin = { top: 50, right: 90, bottom: 30, left: 90 },
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     linkLength = 180;
@@ -117,12 +117,16 @@ function update(source) {
         })
         .on('click', click);
 
+    // Circle color states
+    var nodeColorExpanded = "#FFE5B1",
+        nodeColorCollapsed = "FEA237";
+    
     // Add Circle for the nodes
     nodeEnter.append('circle')
         .attr('class', 'node')
         .attr('r', 1e-6)
         .style("fill", function(d) {
-            return d._children ? "lightsteelblue" : "#fff";
+            return d._children ? nodeColorCollapsed : nodeColorExpanded;
         });
 
     // Add labels for the nodes
@@ -134,6 +138,7 @@ function update(source) {
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start";
         })
+        .style("color", "#CCCCCC")
         .text(function(d) { return d.data.name; });
 
     // UPDATE
@@ -162,7 +167,7 @@ function update(source) {
                     return "red";
                 }
             }
-            return d._children ? "lightsteelblue" : "#fff";
+            return d._children ? nodeColorCollapsed : nodeColorExpanded;
         })
         .attr('cursor', 'pointer');
 
@@ -266,4 +271,14 @@ function update(source) {
         
         update(d);
     }
+}
+
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+  
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
 }

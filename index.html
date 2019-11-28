@@ -2,7 +2,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- load the d3.js library -->
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="./data/all_courses_data.js"></script>
@@ -21,7 +24,31 @@
 
 
 <body>
-  <h2>Courses at Simon Fraser University</h2>
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="#">about</a>
+        <a href="https://www.facebook.com/sfusurge/">facebook</a>
+        <a href="https://www.instagram.com/sfusurge/">instagram</a>
+        <a href="https://github.com/sfusurge/DegreeNavigator">github</a>
+
+    </div>
+  </div>
+  
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="#home" id="logo">SFU Degree Navigator</a>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" id="button" class="icon" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
 </body>
 
 <!-- The Modal -->
