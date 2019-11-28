@@ -155,8 +155,30 @@ body{
   color: #ddd;
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #212121;
-  color: #DADADA;
+/* styling the text wrapper */
+.sqs-block-content {
+  display: block;
+  color: black;
+  overflow-wrap: break-word;
+  letter-spacing: 0em;
+  text-transform: none;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.8;
+  padding: 40px 50px;
+}
+h3 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 36px;
+  text-align: center;
+}
+.demopic {
+  display: inline-block;
+  width: 95%;
+  height: auto;
+}
+.imgwrapper{
+  text-align: center;
 }
