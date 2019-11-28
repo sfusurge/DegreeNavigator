@@ -183,6 +183,7 @@ h2 {
 .imgwrapper{
   text-align: center;
 /* Style the active link (or home/logo) */
+}
 .active {
 background-color: #212121;
 color: #DADADA;
