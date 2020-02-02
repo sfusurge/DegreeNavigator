@@ -119,8 +119,8 @@ function update(source) {
         .on('click', click);
 
     // Circle color states
-    var nodeColorExpanded = "#464866",
-        nodeColorCollapsed = "#aaabb8";
+    var nodeColorExpanded = "#faed26",
+        nodeColorCollapsed = "#FFFFFF";
     
     // Add Circle for the nodes
     nodeEnter.append('circle')
