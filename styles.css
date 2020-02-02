@@ -1,14 +1,13 @@
-
 body{
-  background-color: rgb(40, 160, 240);
+  background-color: #2e9cca;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;   
 }
 
 .node circle {
-  fill: #FEC962;
-  stroke: steelblue;
+  fill: #464866;
+  stroke: #29648a;
   stroke-width: 3px;
 }
 
@@ -21,7 +20,7 @@ font-weight: 700;
 
 .link {
 fill: none;
-stroke: rgba(249, 223, 77, 0.712);
+stroke:gray;
 stroke-width: 2px;
 }
 

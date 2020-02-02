@@ -13,7 +13,7 @@ d3.select("body")
     .attr("onload", "updateWidth()");
 
 function updateWidth () {
-    width = window.innerWidth-margin.left-margin.right;
+    width = window.innerWidth-margin.left-margin.right-25;
     linkLength=(width-50)/4; 
     update(root);
 }
@@ -85,7 +85,8 @@ function update(source) {
     };
     childCount(0, root);  
     
-    height = d3.max(levelWidth) * 25 + 500 - margin.top - margin.bottom; // 25 pixels per line  
+    var calcHeight = Math.max(d3.max(levelWidth)*35, window.screen.height*0.75 -margin.top - margin.bottom);
+    height = calcHeight; // 25 pixels per line  
     
     // Update tree and svg dimensions
     treemap = treemap.size([height, width]);    
@@ -118,8 +119,8 @@ function update(source) {
         .on('click', click);
 
     // Circle color states
-    var nodeColorExpanded = "#FFE5B1",
-        nodeColorCollapsed = "FEA237";
+    var nodeColorExpanded = "#464866",
+        nodeColorCollapsed = "#aaabb8";
     
     // Add Circle for the nodes
     nodeEnter.append('circle')
