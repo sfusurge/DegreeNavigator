@@ -2,8 +2,8 @@
 var coursesTaken = ["CMPT 120", "CMPT 125"];
 
 // Set the dimensions and margins of the diagram
-var margin = { top: 50, right: 90, bottom: 30, left: 90 },
-    width = 960 - margin.left - margin.right,
+var margin = { top: 25, right: 110, bottom: 25, left: 110 },
+    width = 100% - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     linkLength = 180;
 
@@ -85,7 +85,7 @@ function update(source) {
     };
     childCount(0, root);  
     
-    var calcHeight = Math.max(d3.max(levelWidth)*35, window.screen.height*0.75 -margin.top - margin.bottom);
+    var calcHeight = Math.max(d3.max(levelWidth)*35, window.screen.height*0.77 -margin.top - margin.bottom);
     height = calcHeight; // 25 pixels per line  
     
     // Update tree and svg dimensions
@@ -119,7 +119,7 @@ function update(source) {
         .on('click', click);
 
     // Circle color states
-    var nodeColorExpanded = "#faed26",
+    var nodeColorExpanded = "steelblue",
         nodeColorCollapsed = "#FFFFFF";
     
     // Add Circle for the nodes
