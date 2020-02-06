@@ -1,6 +1,3 @@
-//put the courses taken in this array
-var coursesTaken = ["CMPT 120", "CMPT 125"];
-
 // Set the dimensions and margins of the diagram
 var margin = { top: 25, right: 110, bottom: 25, left: 110 },
     width = 100% - margin.left - margin.right,
@@ -155,21 +152,6 @@ function update(source) {
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
         .attr('r', 10)
-        //turns the node green if the name is in coursesTaken
-        .style("fill", function(d) {
-            for(a = 0; a < coursesTaken.length; a++){
-                if(d.data.name == coursesTaken[a]){
-                    return "green";
-                }
-            }
-            //Turns all W courses orange
-            if(d.data.WQB != undefined){
-                if (d.data.WQB.includes("W")){
-                    return "red";
-                }
-            }
-            return d._children ? nodeColorCollapsed : nodeColorExpanded;
-        })
         .attr('cursor', 'pointer');
 
 
