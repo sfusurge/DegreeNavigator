@@ -1,5 +1,5 @@
 body{
-  background-color: #2e9cca;
+  background-color: #568cdb;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;   
@@ -7,7 +7,7 @@ body{
 
 .node circle {
   fill: #464866;
-  stroke: #29648a;
+  stroke: #2948ba;
   stroke-width: 3px;
 }
 
@@ -20,7 +20,7 @@ font-weight: 1000;
 
 .link {
 fill:none;
-stroke:steelblue;
+stroke:rgba(41, 72, 186,0.3);
 stroke-width: 3px;
 }
 
@@ -138,16 +138,15 @@ display: block;
 }
 #logo {
 color: white;
-text-align: center; 
+float: left;
+text-align: center;
 }
 /* Style the hamburger menu */
 .topnav a.icon {
 background-color: #25274d;
 color: white;
-display: block;
-position: absolute;
-right: 0;
-top: 0;
+float: right;
+
 }
 
 /* Add a grey background color on mouse-over */
@@ -183,8 +182,9 @@ h2 {
 }
 .imgwrapper{
   text-align: center;
-  border: white solid 0.5vw;
+  border: #ffca61 solid 0.5vw;
   padding: 0;
+  margin: -0.5vw 0;
 /* Style the active link (or home/logo) */
 }
 .active {
@@ -193,9 +193,9 @@ color: #DADADA;
 }
 
 .textBox{
-  background-color: #464866;
+  background-color: #1c307a;
   color: white;
-  border: white 0.5vw solid;
+  border: #ffca61 0.5vw solid;
   text-align: center;
   padding:1vw;
 }
@@ -203,4 +203,12 @@ color: #DADADA;
 .imageBox{
   object-fit: fill;
   padding: 0;
+}
+
+.surgeIcon{
+  align-content: center;
+  width: 65px;
+  height: 65px;
+  float: left;
+  padding: 8px;
 }
