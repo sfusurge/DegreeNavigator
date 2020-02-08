@@ -152,7 +152,10 @@ function update(source) {
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
         .attr('r', 10)
-        .attr('cursor', 'pointer');
+        .attr('cursor', 'pointer')
+        .style('fill',function(d){
+            return d._children ? nodeColorCollapsed : nodeColorExpanded;
+        });
 
 
     // Remove any exiting nodes
