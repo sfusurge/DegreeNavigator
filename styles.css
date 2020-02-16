@@ -1,28 +1,27 @@
-
 body{
-  background-color: rgb(40, 160, 240);
+  background-color: #568cdb;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;   
 }
 
 .node circle {
-  fill: #FEC962;
-  stroke: steelblue;
+  fill: #464866;
+  stroke: #2948ba;
   stroke-width: 3px;
 }
 
 .node text {
 font-size: 20px;
 font-family: 'Roboto', sans-serif;
-font-weight: 700;
+font-weight: 1000;
 
 }
 
 .link {
-fill: none;
-stroke: rgba(249, 223, 77, 0.712);
-stroke-width: 2px;
+fill:none;
+stroke:rgba(41, 72, 186,0.3);
+stroke-width: 3px;
 }
 
 /* The Modal (background) */
@@ -42,10 +41,11 @@ font-family: 'Roboto', sans-serif;
 
 /* Modal Content/Box */
 .modal-content {
-background-color: #fefefe;
+color: white;
+background-color: #25274d;
 margin: 15% auto; /* 15% from the top and centered */
 padding: 20px;
-border: 1px solid #888;
+border: 2px solid white;
 width: 80%; /* Could be more or less, depending on screen size */
 }
 
@@ -73,9 +73,9 @@ position: fixed; /* Stay in place */
 z-index: 1; /* Sit on top */
 left: 0;
 top: 0;
-background-color: rgb(0,0,0); /* Black fallback color */
-background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-overflow-x: hidden; /* Disable horizontal scroll */
+background-color: #25274d; /* Black fallback color */
+background-color: rgba(37,39,77); /* Black w/opacity */
+overflow: hidden; /* Disable horizontal scroll */
 transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
@@ -93,7 +93,7 @@ margin-top: 30px; /* 30px top margin to avoid conflict with the close button on 
 padding: 8px;
 text-decoration: none;
 font-size: 36px;
-color: #818181;
+color: white;
 display: block; /* Display block instead of inline */
 transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -124,7 +124,7 @@ font-size: 60px;
 /* Style the navigation menu */
 .topnav {
 overflow: hidden;
-background-color: #ddd;
+background-color: #25274d;
 position: relative;
 }
 
@@ -137,23 +137,22 @@ font-size: 36px;
 display: block;
 }
 #logo {
-color: #212121;
-text-align: center; 
+color: white;
+float: left;
+text-align: center;
 }
 /* Style the hamburger menu */
 .topnav a.icon {
-background-color: #ddd;
-color: black;
-display: block;
-position: absolute;
-right: 0;
-top: 0;
+background-color: #25274d;
+color: white;
+float: right;
+
 }
 
 /* Add a grey background color on mouse-over */
 #button:hover {
-background: black;
-color: #ddd;
+background: white;
+color: #25274d;
 }
 
 /* styling the text wrapper */
@@ -163,10 +162,10 @@ color: #ddd;
   overflow-wrap: break-word;
   letter-spacing: 0em;
   text-transform: none;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 200;
-  line-height: 1.8;
-  padding: 40px 50px;
+  line-height: 1.5;
+  padding: 0;
 }
 h3 {
   font-size: 20px;
@@ -176,15 +175,40 @@ h2 {
   text-align: center;
 }
 .demopic {
-  display: inline-block;
-  width: 95%;
+  display: block;
+  object-fit: fill;
+  width: 100%;
   height: auto;
 }
 .imgwrapper{
   text-align: center;
+  border: #ffca61 solid 0.5vw;
+  padding: 0;
+  margin: -0.5vw 0;
 /* Style the active link (or home/logo) */
 }
 .active {
 background-color: #212121;
 color: #DADADA;
+}
+
+.textBox{
+  background-color: #1c307a;
+  color: white;
+  border: #ffca61 0.5vw solid;
+  text-align: center;
+  padding:1vw;
+}
+
+.imageBox{
+  object-fit: fill;
+  padding: 0;
+}
+
+.surgeIcon{
+  align-content: center;
+  width: 65px;
+  height: 65px;
+  float: left;
+  padding: 8px;
 }

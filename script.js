@@ -1,9 +1,6 @@
-//put the courses taken in this array
-var coursesTaken = ["CMPT 120", "CMPT 125"];
-
 // Set the dimensions and margins of the diagram
-var margin = { top: 50, right: 90, bottom: 30, left: 90 },
-    width = 960 - margin.left - margin.right,
+var margin = { top: 25, right: 110, bottom: 25, left: 110 },
+    width = 100% - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     linkLength = 180;
 
@@ -13,7 +10,7 @@ d3.select("body")
     .attr("onload", "updateWidth()");
 
 function updateWidth () {
-    width = window.innerWidth-margin.left-margin.right;
+    width = window.innerWidth-margin.left-margin.right-25;
     linkLength=(width-50)/4; 
     update(root);
 }
@@ -85,7 +82,8 @@ function update(source) {
     };
     childCount(0, root);  
     
-    height = d3.max(levelWidth) * 25 + 500 - margin.top - margin.bottom; // 25 pixels per line  
+    var calcHeight = Math.max(d3.max(levelWidth)*35, window.screen.height*0.77 -margin.top - margin.bottom);
+    height = calcHeight; // 25 pixels per line  
     
     // Update tree and svg dimensions
     treemap = treemap.size([height, width]);    
@@ -118,8 +116,8 @@ function update(source) {
         .on('click', click);
 
     // Circle color states
-    var nodeColorExpanded = "#FFE5B1",
-        nodeColorCollapsed = "FEA237";
+    var nodeColorExpanded = "#faa323",
+        nodeColorCollapsed = "#ffca61";
     
     // Add Circle for the nodes
     nodeEnter.append('circle')
@@ -154,22 +152,10 @@ function update(source) {
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
         .attr('r', 10)
-        //turns the node green if the name is in coursesTaken
-        .style("fill", function(d) {
-            for(a = 0; a < coursesTaken.length; a++){
-                if(d.data.name == coursesTaken[a]){
-                    return "green";
-                }
-            }
-            //Turns all W courses orange
-            if(d.data.WQB != undefined){
-                if (d.data.WQB.includes("W")){
-                    return "red";
-                }
-            }
+        .attr('cursor', 'pointer')
+        .style('fill',function(d){
             return d._children ? nodeColorCollapsed : nodeColorExpanded;
-        })
-        .attr('cursor', 'pointer');
+        });
 
 
     // Remove any exiting nodes
